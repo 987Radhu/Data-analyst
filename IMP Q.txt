@@ -1,0 +1,22 @@
+1.What is Tableau? Why is it used?
+2.What are the different products offered by Tableau?
+3.What are the differences between Tableau Desktop and Tableau Public?
+4.Explain the different types of joins in Tableau.
+5.What is data blending in Tableau? How is it different from joins?
+6.What are the different file types in Tableau?
+7.What is the difference between a .twb and .twbx file?
+8.What is a Data Extract in Tableau? How is it different from a live connection?
+9.What are calculated fields in Tableau? How do you create them?
+10.what are different types of calculations in Tableau?
+11.What are LOD (Level of Detail) expressions? Explain the difference between 
+FIXED, INCLUDE, and EXCLUDE.
+12.What are the different types of filters available in Tableau?
+13.What is a context filter? How is it different from other filters?
+14.What is a Story in Tableau, and how is it different from a Dashboard?
+15.what is dashboard?
+16.list 6 charts in tableau?
+17.How do you connect to different data sources in Tableau?
+18.What is the difference between a live connection and an extract in Tableau?
+19.what are difference b/w developer tool and sharing tool?
+20.Is we have live connection in Tableu public?
+21.Is we have Extract connection in Tableu public

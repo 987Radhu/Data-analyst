@@ -1,0 +1,225 @@
+1) DAX
+2) Basic Formula (sum(),count(),max(),min(),average())
+3) add serach bar
+4) Table and Matrix
+5) Concatenation
+-------------------------------------------------
+
+11-09-2024
+-----------
+If DAX Function || How to calculate bonus Percentage based on salary
+
+
+Go Table view -->  click New Column  --> Bonus = IF(Data[Salary]>=20000,"10%","20%") --- >Enter or commit --> It will create new Column
+
+
+
+Go table view -->click New Column --> SalaryBonus = IF(Data[Salary]>=20000,Data[Salary]+Data[Salary]*10/100,Data[Salary]+Data[Salary]*20/100) --> New Column have salary+bonus values
+
+Before Bonus and After Bonus
+------------------------------ 
+
+Using Clustered column chart
+
+Before Bonus
+select clustered column chart ---> x-axis:Name
+
+y axis -->salary
+
+After Bonus
+
+select clustered column chart ---> x-axis:Name
+
+y-axis --> salary+Bonus
+
+Split Column 
+------------
+Go transform data ---->which column you want to split select the column and make duplicate ---> then select the duplicate column ---> go split column option --> click --> select bydelimiter ---> already few is there default(like space,comma,equal etc) if you special character is not there you choose customer option give your special character --> submit
+
+
+DAX||contains,Containsstring,containsStringExact
+------------------------------------------
+1)Contains_Value = CONTAINS(Data,Data[Job Level],"executive")
+2)Contains_Value = CONTAINS(Data,Data[Job Level],"executive",Data[FullName],"James Tony")
+
+
+3)ContainsString = CONTAINSSTRING(SELECTEDVALUE(Data[FullName]),"tony")
+ContainsString = CONTAINSSTRING(SELECTEDVALUE(Data[FullName]),"JAM")
+ContainsString = CONTAINSSTRING(SELECTEDVALUE(Data[FullName]),"j")
+
+
+4)containsStringExact = CONTAINSSTRINGEXACT(SELECTEDVALUE(Data[Job Level]),"Executive")
+
+
+--------------------------------------------------------------
+12-09-2024
+-----------
+
+Power Query Editor use to connect prepare and transfom data
+
+1) Split Column|| How to seperate column with delimiter,comma,colon and space
+
+
+How to split column?
+
+Go --> split column--> by delimiter --> choose customer--> add @ symabol --> then --> 2 column will split one for Name another one  for domain name
+
+If you want split more than 2 column or 1 column you go for Advance Option 
+
+
+2) POWER BI - TOP N Advance Filter to view salary by Employee Name
+------------------------------------------------------------
+
+
+Select before Bonus chart -->  Go Filter option---> Select filter on visual  --> drag fullName column ---> see filter type --> inside select TOP N option---> show item select top or bottom ---> after give how many values you want show -->by value means based on which value you want to give --> once you give --> click apply filter --> after filter will apply
+
+
+3) POWER BI - Unpivot column in POWER Query||How to change column values to rows 
+-------------------------------------------------------------
+
+
+
+4) Power BI - Custom column vs calculated column in power Query
+------------------------------------------------------------
+
+Calculated column is nothing using  DAX function
+Eg:Countof character = LEN(Data[Name])
+custom column ---> without DAX Formula
+
+Click---> Transform data --> Addcolumn option inside --> custom column --> dialog box will open 
+
+
+New Column name ---> formula 
+
+= [salary]*5/100
+
+New column name total Salary
+
+= [salary]+[bonus]
+
+
+Power BI -- Date Function In Power Query
+------------------------------------------
+
+Example source file name is sample sales data 
+
+
+Data function is used spilt year,month,date
+
+Transform --> add column --> date -->
+
+
+--------------------------------------------------------------13-09-2024
+ POWER QUery Editor|| Format
+
+transform data ---> Add column --> Format -->
+------------------------------------------------------------
+16-09-2024
+ Dax formula total sales, total profit,profit mergin - Eg:Sample sales Data source file
+
+Total cost:
+
+New Column ---->Totat_Cost = 'Orders Data'[Cost of Goods]*'Orders Data'[Quantity]
+
+New column --> Total_Sales = 'Orders Data'[Price]*'Orders Data'[Quantity]
+New Column --> Profit = 'Orders Data'[Total_Sales]-'Orders Data'[Totat_Cost]
+
+New Column --->  Profit_Mergin% = 'Orders Data'[Profit]/'Orders Data'[Total_Sales]
+
+Another formula
+Profit_Megin% = DIVIDE('Orders Data'[Profit],'Orders Data'[Total_Sales])
+
+MonthWise:
+
+New Column = Month = FORMAT('Orders Data'[Order Date],"MMMM")
+
+quaterWise:
+
+New Column = Quarter = "Q"& QUARTER('Orders Data'[Order Date])
+
+YearWise = Format(orderdate,"YYYY")
+
+DateWise = Format(orderdate,"DD")
+
+-----------------------------------------------------
+
+2)Sort MOnth Name by Chronological order
+3 )Sales Analysis by Quater and Year in Power BI
+
+--------------------------------------------------------
+17-09-2024
+
+1) Export POWER BI Data to Excel
+ 
+
+Table ---> what are the columns you want you can drag 
+Format ---> General --> title
+Drag slicer ---> dray year 
+table --> three dots --> export data ---> excel format file will create
+
+2) How to Get Last refresh data in POWER BI?
+
+
+HOme ---> tranform data --> new Source---> Blank Query-->
+
+ Write the Formula =DateTime.LocalNow() --> click --> to table  option 
+
+click --> column --> Add column --> date --> select dateOnly
+click ---> Add column --> time --> select --> time only
+
+
+DAX ---->  MAX,MAXX,MAXA
+
+MAX = Max(totalSales)
+MAXX  = MAXX('Orders Data','Orders Data'[Total Sales])
+
+ORders data is table Name
+
+Maxx = MAXX(FILTER('Orders Data', 'Orders Data'[Category] = "Technology"),'Orders Data'[Total Sales])
+
+MAXA ---->  MAXA = MAXA('Orders Data'[ISboolean])
+
+MIN,MINX,MINA
+-------------
+---------------------------------------------------------
+18-09-2024
+
+DAX 
+---
+1) MAX,MAXX,MAXA
+2) MIN,MINX,MINA
+
+MINX = MINX(FILTER('Orders Data', 'Orders Data'[Category]="Furniture"),'Orders Data'[Total Sales]
+
+3) COUNT,COUNTA,COUNTX,COUNTAX,DistinctCOUNT
+
+COUNTA -----> COUNTA = COUNTA('COUNT Function'[ISQuantity])
+
+SimpleCount = COUNT('COUNT Function'[ISQuantity]) It Won't be work Because count accept all exception Logical value
+
+COUNTX = COUNTX(FILTER('COUNT Function','COUNT Function'[Return Status]="No"),'COUNT Function'[Return Status])
+
+COUNTAX = COUNTAX(FILTER('COUNT Function','COUNT Function'[ISQuantity] = True()),'COUNT Function'[ISQuantity])
+
+DISTINCTCOUNT = DISTINCTCOUNT('COUNT Function'[Category])
+
+COUNTBLANK = COUNTBLANK('COUNT Function'[Return Status])
+COUNTROWs = COUNTROWS('COUNT Function')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+1) Develop a Power BI project focused on HR data for a company facing challenges in comprehending their employee data to extract valuable insights. Construct a comprehensive dashboard that includes the following components:
+
+
+
+Headcount Analysis:
+Illustrate Headcount breakdown by Business Unit.
+Display Headcount distribution across various age groups.
+Analyze Headcount based on gender.
+Breakdown of Headcount by Job Title.
+Show Headcount distribution across different departments.
+
+Slicers for Enhanced Analysis:
+Implement multiple slicers enabling dynamic filtering by   
+    department, country, and employee full name.
+
+Data Refresh Information:
+Incorporate a visual element indicating the date and time of the 
+    last data refresh.
+
+2)Power BI project focusing on state-wise constituency seats in India
+This project aims to provide deeper insights into India's state-wise constituencies, facilitating a comprehensive understanding. By examining various metrics, it endeavors to shed light on:
+
+Project Questions
+
+
+1. Determine the total number of states within India.
+2. Calculate the overall count of constituency seats across the country.
+3. Break down the number of constituency seats by each state.
+4. Visualize the distribution of constituency seats across states using a map.
+5. Analyze the number of constituency seats by political parties.
+6. Explore the distribution of constituency seats by coalition parties.
+
+
+
+Slicers for Enhanced Analysis:
+Implement multiple slicers enabling dynamic filtering by   
+    department, country, and employee full name.
+
+Data Refresh Information:
+Incorporate a visual element indicating the date and time of the 
+    last data refresh.
+
+
+Everything is perfect, but the introduction of DAX needs two days to be covered. It's a very important topic for building dashboards in Power BI and is frequently asked in interviews
+Topics to be Covered:
+• What is DAX?
+• Why is DAX Important?
+• DAX Syntax
+• Data Types in DAX
+• Functions in DAX
+• Measures in DAX
+• Operators in DAX
+• Tables and Filtering in DAX
+• Queries in DAX
+• Parameter Naming in DAX
+
+
+
+what is POWER BI?
+why power BI?
+WHat is Power BI Query Editor?
+Advantage and Disadvantage of pOWER BI?
+Difference between Tabule and POWER BI?
+why You people are using visual option like charts,map,table?
+
+
+
+
+Age Group = 
+SWITCH(
+    TRUE(),
+    'Employee Data'[Age] < 20, "Under 20",
+    'Employee Data'[Age] < 30, "20-29",
+    'Employee Data'[Age] < 40, "30-39",
+    'Employee Data'[Age] < 50, "40-49",
+    "50+"
+)
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+KPI,requrments:
+1:Total sales,avg sales,number of items,average rating
+
+2:
+a:Total sale by fat content
+  objective=Analyze the impact of fat content on total sales
+  additional KPI Metrics=(Total sales,avg sales,number of items,average rating)
+  chat type=Donut chat
+
+b:Total sale by item type
+  objective=Identify the performance different type in terms of total sales
+  additional KPI Metrics=(Total sales,avg sales,number of items,average rating)
+  chat type=Bar chat
+
+c:Fat content by outlet for total sale
+  objective=compare total sales across different outlet segment by fat content
+  additional KPI Metrics=(Total sales,avg sales,number of items,average rating)
+  chat type=stacked column chat
+
+d:Total sale by outlet establishment
+  objective=evaluate how the age or type of outlet estblishment influences totsl sales
+  chat type=Line chat
+
+e:sales by ourtsize
+  objective=Analyze the correletion between outlet size and totale sales
+  chat type=donut/pie chat
+
+f:sales by outer location
+  objective=Assess the geographic distribution of sales across different location
+  chat type=Funnel map
+
+g:all matrix by outer type
+  objective=privide a copmrehrensive view of all keys metrics (total sales,avg sales,number of item,avg rating) broken down by different outlet types
+  chat type = metrics card
+
+color:
+code=#DAB900
+code=#ffff00

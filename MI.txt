@@ -1,0 +1,36 @@
+Note: Each Student must execute the 2 out of 2
+
+visualization 01:
+ Task: Connect to the "Sample - Superstore" dataset and create a
+Bar Chart displaying the total sales per category.
+ Instructions: Ensure the bars are sorted in descending order by
+total sales. Color the bars based on the category.
+
+ Task: Create a calculated field that computes the profit margin
+(Profit / Sales) for each product and display it in a Crosstab.
+ Instructions: Format the profit margin as a percentage and
+include columns for category and subcategory.
+
+ Task: Apply a Top N Filter to show only the top 10 customers
+by total sales.
+
+ Instructions: Display this in a Scatter Plot with Sales on the x-
+axis and Profit on the y-axis. Add customer names as labels.
+
+
+ Task: Create a Horizontal Bar Chart showing the sales per
+subcategory.
+ Instructions: Sort the subcategories by total sales and color the
+bars based on the profit margin.
+
+visualization 02:
+ Task: Join the "Orders" and "Returns" tables in the "Sample -
+Superstore" dataset and create a Table showing the total sales
+of returned products.
+ Instructions: Use an inner join, left join, right join, full join
+display the order IDs with their corresponding returned status.
+
+ Task: Create a Horizontal Bar Chart showing the sales per
+subcategory.
+ Instructions: Sort the subcategories by total sales and color the
+bars based on the profit margin.
